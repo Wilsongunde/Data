@@ -1,0 +1,180 @@
+To run mvn commands from cmd prompt
+-----------------------------------------------------------------------
+
+-> Go to below URL and download latest release of Maven 
+           (apache-maven-(version)-bin.zip).
+ 
+ http://maven.apache.org/download.cgi
+
+
+--> Extract Zip folder into any local driver , where ever you want like
+ (c drive or d drive).
+                                   in my system ( f:\maven)
+
+
+--> Set the environment variables for Maven .
+         right click on computer-----properties-------advanced system settings-----environment variables.
+
+
+  1) Go to system environment variables and add
+  
+       a. New---
+              VariableName-----Maven_Home 
+              variable value------path of maven folder (........example like  ----f:\maven)
+
+
+        b. Click on edit Path variable add (append)
+             xxxxxxxxxxxxx ;path of mavenfolder\bin;   (ex:  f:\maven\bin; )
+
+
+        c. add a new variable
+                    java_home
+                    path of jdk folder
+
+--> To check whether you have done correct configuration or not -->
+
+ Open CMD and Type 'mvn --version' press enter --> 
+
+              it should display maven details,,, if any error check the above config again
+
+=================================================
+
+1. Go to Eclipse--------Install maven plug in   (FOLLOW THIS STEP IF MAVEN PLUGIN NOT IN ECLIPSE)
+
+             help menu--------install new s/w------add------enter name, location ...
+
+           http://download.eclipse.org/technology/m2e/releases/
+
+===============
+
+2. To create a maven project-----go to File menu----others---new Maven project-------select "simple project"----------enter groupid (packagename)
+          artifactid(projectname)---------finish.
+
+         folders in maven project
+	------------------------------------
+	src/test/java------------- package, .java programs we can create
+	src/test/resources-------------- can create,  testng.xml files, .properties files, 
+				testdata  .xls files...etc
+
+
+
+Note : any .jar file to include in the project, it should be added as a dependency in POM.xml
+
+ex:
+      <dependencies>
+           <dependency>
+	<groupId>xxxxxxx</groupId>
+	<artifactId>xxxxxx</artifactId>
+	<version>xxxxxx</version>
+           </dependency>
+           ..........
+           ..........
+       </dependencies>
+
+  
+ WE CAN GET THE DEPENDENCIES IN
+                       www.mvnrepository.com
+
+
+any dependency specified in POM.xml,  the dependency is built in our system in
+	c:\users\<username>\.m2\repository\org\.......
+
+
+======================================
+how to specify the dependency for 3rd party jar files  ( the dependency not found in mvnrepository.com)
+------------
+         we can install the jar file
+                      go to cmd prompt and enter the command
+
+                  in installation, specify the groupId, artifactId, version and install.
+
+
+
+
+                            mvn install:install-file -Dfile=<path of .jar file> -DgroupId=<groupid> -DartifactId=<artifactid> -Dversion=<versionno> -Dpackaging=jar
+
+               ex:
+                           mvn install:install-file -Dfile=e:\10am_aug_2316\libarary\ATUTestRecorder.2.1.jar -DgroupId=org.atu -DartifactId=aturecorder -Dversion=2.1 -Dpackaging=jar
+
+ <dependency>
+	<groupId>org.atu</groupId>
+	<artifactId>aturecorder</artifactId>
+	<version>2.1</version>
+   </dependency>
+
+
+
+
+POM.xml:
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.training</groupId>
+	<artifactId>MavenProject</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<name>MavenProject</name>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<dependency>
+			<groupId>net.sourceforge.jexcelapi</groupId>
+			<artifactId>jxl</artifactId>
+			<version>2.6.12</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>LATEST</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.uncommons</groupId>
+			<artifactId>reportng</artifactId>
+			<version>1.1.4</version>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.testng</groupId>
+					<artifactId>testng</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>LATEST</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<compilerVersion>1.6</compilerVersion>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.17</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>src/test/resources/Testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
+

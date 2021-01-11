@@ -1,0 +1,6 @@
+1.After setup all the things go to the particular project directory in path give as cmd and enter.
+2.Enter mvn clean install -- here generate and compile the build and execute the test cases
+3.Enter mvn test -- Just build execution (without cleaning the build)
+4.Enter mvn clean -- clean/clear  the target folder
+4.Two ways Enter i)mvn package -DskipTests 
+(or) ii)mvn package -Dmaven.test.skip=true -- skip the test cases using maven(put it as true).

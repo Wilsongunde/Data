@@ -1,0 +1,156 @@
+Maven dependencies:
+==================
+<project>
+<dependencies>
+//selenium-java
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>3.141.59</version>
+</dependency>
+//selenium-serverstandalone
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-server</artifactId>
+    <version>2.53.1</version>
+</dependency>
+//Apache poi
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>4.0.1</version>
+</dependency>
+//Apache poi -00xml
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>4.0.1</version>
+</dependency>
+//Apache poi schemas
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml-schemas</artifactId>
+    <version>4.0.1</version>
+</dependency>
+//Apache poi scratchpad
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-scratchpad -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-scratchpad</artifactId>
+    <version>4.0.1</version>
+</dependency>
+//Apache poi excelant
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-excelant -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-excelant</artifactId>
+    <version>4.0.1</version>
+</dependency>
+//Apache poi examples
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-examples -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-examples</artifactId>
+    <version>4.0.1</version>
+</dependency>
+//Apache poi log4j
+<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+<dependency>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>1.2.17</version>
+</dependency>
+//xml beans
+<!-- https://mvnrepository.com/artifact/org.apache.xmlbeans/xmlbeans -->
+<dependency>
+    <groupId>org.apache.xmlbeans</groupId>
+    <artifactId>xmlbeans</artifactId>
+    <version>3.0.2</version>
+</dependency>
+//commans-logging
+<!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+<dependency>
+    <groupId>commons-logging</groupId>
+    <artifactId>commons-logging</artifactId>
+    <version>1.2</version>
+</dependency>
+//commans-codec
+<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+<dependency>
+    <groupId>commons-codec</groupId>
+    <artifactId>commons-codec</artifactId>
+    <version>1.11</version>
+</dependency>
+//commans collections
+<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-collections4</artifactId>
+    <version>4.2</version>
+</dependency>
+//commans compress
+<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-compress -->
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-compress</artifactId>
+    <version>1.18</version>
+</dependency>
+//Test NG
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>6.14.3</version>
+    <scope>test</scope>
+</dependency>
+//Extent reports
+<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+<dependency>
+    <groupId>com.relevantcodes</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>2.41.0</version>
+</dependency>
+//Tess4j
+<!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
+<dependency>
+    <groupId>net.sourceforge.tess4j</groupId>
+    <artifactId>tess4j</artifactId>
+    <version>3.2.1</version>
+</dependency>
+//Sikuli
+<dependency>
+    <groupId>com.sikulix</groupId>
+    <artifactId>sikulixapi</artifactId>
+    <version>1.1.0</version>
+    <systemPath>D:\NAVEEN BACKUP IMPORTANT\wilson\sikuli\sikuli-api-1.1.0.jar</systemPath>
+    <scope>system
+    </scope>
+</dependency>
+//jxl
+<!-- https://mvnrepository.com/artifact/net.sourceforge.jexcelapi/jxl -->
+<dependency>
+    <groupId>net.sourceforge.jexcelapi</groupId>
+    <artifactId>jxl</artifactId>
+    <version>2.6.12</version>
+</dependency>
+//commons-io
+<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+<dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.6</version>
+</dependency>
+
+</dependencies>
+</project>
+
+
+
+
+
+
